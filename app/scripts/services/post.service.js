@@ -1,7 +1,8 @@
 
 let posts = [
     {id: 1, title: 'pierwszy post', text: 'tresc posta'},
-    {id: 2, title: 'drugi post', text: 'tresc posta drugiego'}
+    {id: 2, title: 'drugi post', text: 'tresc posta drugiego'},
+    {id: 3, title: 'trzeci post', text: 'tresc posta trzeciego'}
 ]
 export class PostService {
 
@@ -13,7 +14,7 @@ export class PostService {
 
     static create(data) {
         data.id = posts.length+1;
-        posts.unshift(data);
+        posts.push(data);
         return new Promise((resolve, reject) => {
             resolve(data);
         })
@@ -23,5 +24,9 @@ export class PostService {
         return new Promise((resolve, reject) => {
             resolve(posts[parseInt(id)-1]);
         })
+    }
+
+    static delete(id) {
+        console.log("delete " + id);
     }
 }
