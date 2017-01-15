@@ -21,7 +21,7 @@ export class WriteComponent extends Component {
         formData.forEach((value, key) => {
             results[key] = value;
         });
-        PostService.create(results);
-        routie('')
+        PostService.create(results).then(()=>routie(''));
+
     }
 }
