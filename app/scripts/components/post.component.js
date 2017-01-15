@@ -8,6 +8,7 @@ export class PostComponent extends Component {
     }
 
     init() {
+
     }
 
     destroy() {
