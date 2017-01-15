@@ -9,7 +9,9 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="/app/styles/style.css" rel="stylesheet">
+    <link href="/app/styles/main.css" rel="stylesheet">
+
+    <script src="scripts/libs/routie.js"></script>
 </head>
 <body>
 
@@ -101,6 +103,16 @@
 
 </section>
 
+
+<script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.41/system.js"></script>
+<script>
+    SystemJS.config({
+        baseURL: 'scripts'
+    });
+    SystemJS.import('main.js');
+
+</script>
 
 
 </body>
