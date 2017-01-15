@@ -11,8 +11,8 @@ export class PostService {
         return $.get('/posts/' + id)
     }
 
-    static getComment(postId) {
-
+    static getComments(postId) {
+        return $.get('/comments?postId=' + postId);
     }
 
     static delete(id) {

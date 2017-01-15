@@ -1,4 +1,5 @@
 import {Component} from './component.js';
+import {PostService} from '../services/post.service.js';
 
 export class PostComponent extends Component {
 
@@ -8,6 +9,7 @@ export class PostComponent extends Component {
     }
 
     init() {
+        console.log(this.data);
     }
 
     destroy() {

@@ -60,6 +60,35 @@
         </h5>
 
         <p>{{post.text}}</p>
+        <h4></h4>
+        <form action="">
+            <div class="input-field">
+                <i class="material-icons prefix">comment</i>
+                <textarea
+                        name="comment"
+                        id="comment"
+                        class="materialize-textarea"
+                        placeholder="Treść"
+                        required
+                ></textarea>
+            </div>
+
+            <input
+                    class="btn waves-effect waves-light"
+                    type="submit"
+                    value="Dodaj nowy komentarz">
+        </form>
+
+        <h4>Comments</h4>
+        <ul>
+        {{#post.comments}}
+        <li class="collection-item avatar">
+                <i class="material-icons circle green">insert_chart</i>
+                <span class="title">{{body}}</span>
+            <a href="#!" class="secondary-content"><i class="material-icons">delete</i></a>
+        </li>
+        {{/post.comments}}
+        </ul>
     </article>
 </script>
 

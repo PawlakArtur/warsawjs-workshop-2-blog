@@ -7,7 +7,12 @@ let $page = document.getElementById('page');
 routie('post/:id', controller);
 
 export function controller(id) {
-    PostService.get(id).then(post=>{
-        PostComponent.render({post}, $page);
-    });
+    let postPromise = PostService.get(id).then(post=>{
+        return PostService.getComments(post.id).then(comments=>{
+            post.comments = comments;
+            return post;
+        });
+    })
+
+    postPromise.then(post => PostComponent.render({post}, $page))
 }
