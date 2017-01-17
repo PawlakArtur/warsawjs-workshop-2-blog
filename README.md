@@ -16,5 +16,4 @@ npm run api
 go to http://localhost:8080/app/
 ```
 
-Demo (without comments) available on:
-https://pawlakartur.github.io/warsawjs-workshop-2-blog/app/
+[Demo (without comments)](https://pawlakartur.github.io/warsawjs-workshop-2-blog/app/)
